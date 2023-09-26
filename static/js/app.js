@@ -1,7 +1,7 @@
   function fetchData() {
     d3.json("https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1/14-Interactive-Web-Visualizations/02-Homework/samples.json")
       .then(function (data) {
-        // Handle the fetched data here
+        // fetched data here
         console.log(data); // For debugging, log the data to the console
     }).catch(function(error) {
       console.error("Error fetching data:", error);
@@ -12,11 +12,10 @@
   .then(function (data) {
     // Handle the fetched data here
     console.log(data); // For debugging, log the data to the console
-    
-    // You can perform further data processing and visualization here
+  
     
   
-    // Assuming you have sampleIds and data available
+    // SampleIds and data available
     const dropdown = document.getElementById("dropdown");
     sampleIds.forEach((sampleId, index) => {
       const option = document.createElement("option");
@@ -76,7 +75,7 @@
         marker: {
           size: selectedSample.sample_values,
           color: selectedSample.otu_ids,
-          colorscale: 'Viridis', // You can choose a different colorscale
+          colorscale: 'Viridis', // 
           opacity: 0.7,
         },
       };
@@ -93,7 +92,7 @@
     // Function to display sample metadata
     function displaySampleMetadata(sampleIndex) {
       // Retrieve metadata for the selected sample using the index
-      const selectedMetadata = metadata[sampleIndex]; // Assuming you have a metadata array
+      const selectedMetadata = metadata[sampleIndex]; // 
       
       // Select the HTML element where you want to display the metadata
       const metadataDisplay = document.getElementById("sample-metadata");
@@ -111,7 +110,7 @@
       }
     }
     
-    // Assuming you have sampleMetadata1 available
+    // sampleMetadata1 available
     const sampleMetadata1 = {
       "ID": 1,
       "Age": 30,
@@ -124,7 +123,7 @@
   .catch(function (error) {
     console.error("Error fetching data:", error);
   });
-}
+
 
 
 </script>
